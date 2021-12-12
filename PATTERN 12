@@ -1,0 +1,38 @@
+0	
+1	1	
+2	3	5	
+8	13	21	34	
+55	89	144	233	377	
+
+
+import java.util.*;
+
+public class Main {
+    
+    public static void pattern12(int n)
+    {
+        int nst=1; int a=0; int b=1;
+        
+        for(int r=1; r<=n; r++)
+        {
+            for(int cst=1; cst<=nst; cst++)
+            {
+                System.out.print(a +"\t");
+                 a=a+b;
+                 b=a-b;
+            }
+            
+            nst++;
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+        // write ur code here
+        int n=scn.nextInt();
+        pattern12(n);
+
+    }
+}
