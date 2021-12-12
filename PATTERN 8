@@ -1,0 +1,59 @@
+				*	
+			*		
+		*			
+	*				
+*
+
+import java.util.*;
+
+public class Main {
+    // public static void pattern8(int n)
+    // {
+    //     int nsp=n-1; int nst=1;
+    //     for(int r=1; r<=n; r++)
+    //     {
+    //         for(int csp=1; csp<=nsp;csp++)
+    //         {
+    //             System.out.print("\t");
+    //         }
+            
+    //         for(int cst=1; cst<=nst; cst++)
+    //         {
+    //             System.out.print("*\t");
+    //         }
+            
+    //         nsp--;
+    //         System.out.println();
+    //     }
+    // }
+    
+                        //   OR
+                          
+                          
+     public static void pattern8(int n)
+    {
+        for(int i=1; i<=n; i++)
+        {
+            for(int j=1; j<=n;j++)
+            {
+                if(i+j==n+1)
+                {
+                    System.out.print("*\t");
+                }
+                else
+                {
+                    System.out.print("\t");
+                }
+        }
+        System.out.println();
+    }
+}
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+        // write ur code here
+        int n=scn.nextInt();
+        pattern8(n);
+
+    }
+}
