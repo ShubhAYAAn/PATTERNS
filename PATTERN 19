@@ -1,0 +1,81 @@
+*	*	*		*	
+		*		*	
+*	*	*	*	*	
+*		*			
+*		*	*	*	
+
+import java.util.*;
+
+public class Main {
+    public static void pattern19(int n)
+    {
+     int nst=n, nsp=0;
+        for(int r=1; r<=n; r++)
+        {
+            for(int cst=1; cst<=nst; cst++)
+            {
+                if(r==1)
+                {
+                     if(cst==n || cst<=n/2+1)
+                     {
+                        System.out.print("*\t");  
+                     }
+                     else
+                     {
+                        System.out.print("\t");  
+                     }
+                     
+                }
+                else if(r<=n/2)
+                {
+                    if(cst==n || cst==n/2+1)
+                     {
+                        System.out.print("*\t");  
+                     }
+                     else
+                     {
+                        System.out.print("\t");  
+                     }
+                    
+                }
+                else if(r==n/2+1)
+                 {
+                    System.out.print("*\t"); 
+                }
+                else if(r< n)
+                {
+                     if(cst==1 || cst==n/2+1)
+                     {
+                        System.out.print("*\t");  
+                     }
+                     else
+                     {
+                        System.out.print("\t");  
+                     }
+                }
+                else
+                {
+                 if(cst==1 || cst>=n/2+1)
+                     {
+                        System.out.print("*\t");  
+                     }
+                     else
+                     {
+                        System.out.print("\t");  
+                     }
+            }
+             
+    }
+          System.out.println();
+
+            
+        }
+  
+    }   
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+        int n=scn.nextInt();
+        pattern19(n);
+}
+}
